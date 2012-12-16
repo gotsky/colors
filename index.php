@@ -22,7 +22,7 @@ $mytabcolor = json_decode($json, true);
 $info = $mytabcolor['info'];
 echo "<h2>info</h2>";
 for ($j=0;$j<count($info["colors"]);$j++){
-	echo'<div style="background-color:#'.$info["colors"][$j].';height:40px;width:40px;float:left;margin:4px;border: solid 1px black"></div>';
+	echo'<div style="float:left"><div style="background-color:#'.$info["colors"][$j].';height:80px;width:80px;margin:4px;border: solid 1px black"></div><div>#'.$info["colors"][$j].'</div></div>';
 }
 echo '<div style="clear:both;"></div>';
 
@@ -32,7 +32,7 @@ $kuler = $mytabcolor['kuler_themes'];
 echo "<h2>kuler</h2>";
 for ($i=0;$i<count($kuler);$i++){
 	for ($j=0;$j<count($kuler[$i]["colors"]);$j++){
-		echo'<div style="background-color:#'.$kuler[$i]["colors"][$j].';height:40px;width:40px;float:left;margin:4px;border: solid 1px black"></div>';
+		echo'<div style="float:left"><div style="background-color:#'.$kuler[$i]["colors"][$j].';height:80px;width:80px;margin:4px;border: solid 1px black"></div><div>#'.$kuler[$i]["colors"][$j].'</div></div>';
 	}
 	echo '<div style="clear:both;"></div>';
 }
@@ -41,7 +41,7 @@ $cl_themes = $mytabcolor['cl_themes'];
 echo "<h2>cl_themes</h2>";
 for ($i=0;$i<count($cl_themes);$i++){
 	for ($j=0;$j<count($cl_themes[$i]["colors"]);$j++){
-		echo'<div style="background-color:#'.$cl_themes[$i]["colors"][$j].';height:40px;width:40px;float:left;margin:4px;border: solid 1px black"></div>';
+		echo'<div style="float:left"><div style="background-color:#'.$cl_themes[$i]["colors"][$j].';height:80px;width:80px;margin:4px;border: solid 1px black"></div><div>#'.$cl_themes[$i]["colors"][$j].'</div></div>';
 	}
 	echo '<div style="clear:both;"></div>';
 }
