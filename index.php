@@ -25,6 +25,7 @@ for ($j=0;$j<count($info["colors"]);$j++){
 	echo'<div style="background-color:#'.$info["colors"][$j].';height:40px;width:40px;float:left;margin:4px;border: solid 1px black"></div>';
 }
 echo '<div style="clear:both;"></div>';
+
 //echo "<br>";
 //echo $mytabcolor['kuler_themes'][0]['colors'][0];
 $kuler = $mytabcolor['kuler_themes'];
