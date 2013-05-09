@@ -44,14 +44,22 @@
 <?php
 $ch = curl_init();
 $url = 'http://pictaculous.com/api/1.0/';
-$images[1] = 'img/daft-punk_00301703.jpg';
+$images[1] = 'img/5ODGeTVFDE.gif';
 $images[2] = 'img/daft-punk_00301703.jpg';
 $images[3] = 'img/b238bc780c7cb6a39859f79f41931591.jpeg';
 $images[4] = 'img/acid_picdump_83.jpg';
 $images[5] = 'img/veau-fermier-de-cornouaille-190317.jpg';
+$images[6] = 'img/gotsky.jpg';
+$images[7] = 'http://www.zenzile.com/newhome/images/zenzile-electricsoul-474.jpg';
  
-$key = rand(1,5);
-$image = $images[$key];
+
+if (isset($_GET['key']) && $_GET['key']>=1){
+	$image = $images[$_GET['key']];
+}
+else{
+	$key = rand(1,7);
+	$image = $images[$key];
+}
 
 $fields = array('image'=>file_get_contents($image));
  
