@@ -49,7 +49,7 @@ $images[2] = 'img/daft-punk_00301703.jpg';
 $images[3] = 'img/b238bc780c7cb6a39859f79f41931591.jpeg';
 $images[4] = 'img/acid_picdump_83.jpg';
 $images[5] = 'img/veau-fermier-de-cornouaille-190317.jpg';
-$images[6] = 'img/gotsky.jpg';
+$images[6] = 'img/WALLE.png';
 $images[7] = 'http://www.zenzile.com/newhome/images/zenzile-electricsoul-474.jpg';
  
 
@@ -160,6 +160,6 @@ function html2rgb($color)
 }
 
 ?>
-<script type="text/javascript">//$(".draggable").draggable({ revert: true });</script>
+<script type="text/javascript">$(".draggable").draggable({ revert: true });</script>
   </body>
 </html>
