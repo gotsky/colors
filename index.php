@@ -38,7 +38,7 @@
 	</style>
   </head>
   <body>
-    <h1>Get Colors!!!</h1>
+    <h1>Get Palette</h1>
 
 
 <?php
@@ -98,11 +98,14 @@ echo "<h2>kuler</h2>";
 for ($i=0;$i<count($kuler);$i++){
 	echo '<div><a href="'.$kuler[$i]['url'].'" target="_blank">'.$kuler[$i]['title'].'</a></div>';
 	echo '<div class="draggable">';
+	$listcolorskk = "";
 	for ($j=0;$j<count($kuler[$i]['colors']);$j++){
 		if (coldiff($kuler[$i]['colors'][$j])>=500){$colortxt='white';}else{$colortxt='black';}
 		echo'<div style="float:left"><div style="background-color:#'.$kuler[$i]['colors'][$j].';height:100px;width:100px;color:'.$colortxt.';position:relative;"><div class="colorclass">#'.strtolower($kuler[$i]['colors'][$j]).'</div></div></div>';
+		$listcolorskk .= "#".strtolower($kuler[$i]['colors'][$j])." / ";
 	}
 	echo '</div>';
+	echo '<input type="text" size="40" onClick="this.select();" value="'.$listcolorskk.'"/>';
 	echo '<div style="clear:both;"></div>';
 }
 echo '</div>';
@@ -113,11 +116,14 @@ echo "<h2>color lovers</h2>";
 for ($i=0;$i<count($cl_themes);$i++){
 	echo '<div><a href="'.$cl_themes[$i]['url'].'" target="_blank">'.$cl_themes[$i]['title'].'</a></div>';
 	echo '<div class="draggable">';
+	$listcolors ="";
 	for ($j=0;$j<count($cl_themes[$i]['colors']);$j++){
 		if (coldiff($cl_themes[$i]['colors'][$j])>=500){$colortxt='white';}else{$colortxt='black';}
 		echo'<div style="float:left"><div style="background-color:#'.$cl_themes[$i]['colors'][$j].';height:100px;width:100px;color:'.$colortxt.';position:relative;"><div class="colorclass">#'.strtolower($cl_themes[$i]['colors'][$j]).'</div></div></div>';
+		$listcolors .= "#".strtolower($cl_themes[$i]['colors'][$j])." / ";
 	}
 	echo '</div>';
+	echo '<input type="text" size="40" onClick="this.select();" value="'.$listcolors.'"/>';
 	echo '<div style="clear:both;"></div>';
 }
 echo '</div>';
@@ -160,6 +166,6 @@ function html2rgb($color)
 }
 
 ?>
-<script type="text/javascript">$(".draggable").draggable({ revert: true });</script>
+<script type="text/javascript">$(".draggable").draggable();</script>
   </body>
 </html>
