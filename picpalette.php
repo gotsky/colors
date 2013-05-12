@@ -83,12 +83,12 @@ echo "<div id='kuler'>";
 echo "<h2>Kuler Schemes <a href='#' onclick='$(\"#kuler\").hide();
 $(\"#clove\").show(\"fade\", {}, 500);return false;' class='button mini blue'><span></span></a></h2>";
 for ($i=0;$i<count($kuler);$i++){
-	echo '<div><a href="'.$kuler[$i]['url'].'" target="_blank">'.$kuler[$i]['title'].'</a></div>';
+	echo '<div><a href="'.$kuler[$i]['url'].'" target="_blank">'.$kuler[$i]['title'].' <img src="img/368343328_link.png" width="12px"/></a></div>';
 	echo '<div class="draggable">';
 	$listcolorskk = "";
 	for ($j=0;$j<count($kuler[$i]['colors']);$j++){
 		if (coldiff($kuler[$i]['colors'][$j])>=500){$colortxt='white';}else{$colortxt='black';}
-		echo'<div style="float:left"><div style="background-color:#'.$kuler[$i]['colors'][$j].';height:90px;width:90px;color:'.$colortxt.';position:relative;"><div class="colorclass">#'.strtolower($kuler[$i]['colors'][$j]).' <img src="img/"/></div></div></div>';
+		echo'<div style="float:left"><div style="background-color:#'.$kuler[$i]['colors'][$j].';height:90px;width:90px;color:'.$colortxt.';position:relative;"><div class="colorclass">#'.strtolower($kuler[$i]['colors'][$j]).'</div></div></div>';
 		$listcolorskk .= "#".strtolower($kuler[$i]['colors'][$j])." ";
 	}
 	echo '</div>';
@@ -103,7 +103,7 @@ echo "<div id='clove' style='display:none;'>";
 echo "<h2>Color Lovers Schemes <a href='#' onclick='$(\"#clove\").hide();
 $(\"#kuler\").show(\"fade\", {}, 500);return false;' class='button mini blue'><span></span></a></h2>";
 for ($i=0;$i<count($cl_themes);$i++){
-	echo '<div><a href="'.$cl_themes[$i]['url'].'" target="_blank">'.$cl_themes[$i]['title'].'</a></div>';
+	echo '<div><a href="'.$cl_themes[$i]['url'].'" target="_blank">'.$cl_themes[$i]['title'].' <img src="img/368343328_link.png" width="12px"/></a></div>';
 	echo '<div class="draggable">';
 	$listcolors ="";
 	for ($j=0;$j<count($cl_themes[$i]['colors']);$j++){

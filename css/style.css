@@ -287,5 +287,5 @@ margin-top:20px;
 #contentpalet{width:100%;margin:20px auto 0px;}
 #content{margin:20px auto 0px;}
 
-#contentpalet h1 a{font-size: 70px !important;}
+#contentpalet h1 a{font-size: 70px !important;text-align: left;margin-left:40px;}
 #contentpalet h2{font-size: 25px;line-height: 30px;text-align: left;}
