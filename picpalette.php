@@ -11,7 +11,7 @@
   <body>
   	<div id="container">
     <div id="contentpalet">
-    	<h1><a href="getpalet.php">Get Palette</a></h1>
+    	<h1><a href="picpalette.php">Pic Palette</a></h1>
 
 
 <?php
@@ -51,7 +51,7 @@ curl_setopt($ch, CURLOPT_URL, $url);
  
 $json = curl_exec($ch);
 echo '<div style="float:left;margin-left:40px;">';
-echo "<h2>Image Palette</h2>";
+echo "<h2>Pic Palette</h2>";
 
 //print_r(json_decode($json, true));
 $mytabcolor = json_decode($json, true);
